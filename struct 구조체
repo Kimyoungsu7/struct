@@ -1,0 +1,73 @@
+#1
+#include <stdio.h>
+
+struct student
+{
+int number;
+char name[10];
+double grade;
+};
+
+int main(void)
+{
+  struct student s1 = {202415005, "kim", 4.5};
+  
+  return 0;
+  } 
+  
+  #2
+  #include <stdio.h>
+
+struct student
+{
+int number;
+char name[10];
+double grade;
+}s1;
+
+int main(void)
+{
+  s1.number = 202415005;
+  strcpy_s(s1.name, 10, "kim");
+  s1.grade = 4.5;
+  return 0;
+  } 
+
+  #3
+  #include <stdio.h>
+#include <string.h>
+
+struct student
+{
+	int number;
+	char name[10];
+	double grade;
+}s1;
+
+int main(void)
+{
+	printf("학변:");
+	scanf_s("%d", &s1.number);
+
+	printf("이름:");
+	scanf_s("%s", s1.name, 10);
+
+	printf("학점:");
+	scanf_s("%lf", &s1.grade);
+
+	printf("학번:%d\n 이름:%s\n 학점:%lf\n\n,s1.number,s1.name.s1grade);
+
+		return 0;
+}
+
+#4
+#include <stdio.h>
+
+struct point 
+{
+		int x,y;
+};
+
+int main(void)
+{
+		struct point p1 = 
